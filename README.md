@@ -74,4 +74,4 @@ Free to use and modify for personal or educational purposes.
 
 ## Author
 
-Created as a simple project to demonstrate Python GUI development with Tkinter.
+Angela Bera
