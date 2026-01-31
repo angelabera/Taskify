@@ -16,6 +16,9 @@ def delete_task():
     if selected:
         listbox.delete(selected[0])
 
+def clear_all():
+    listbox.delete(0, tk.END)
+
 title = tk.Label(
     root,
     text="My To-Do List",
@@ -56,5 +59,15 @@ delete_button = tk.Button(
     command=delete_task
 )
 delete_button.pack(side="left", padx=5)
+
+clear_button = tk.Button(
+    root,
+    text="Clear All",
+    width=27,
+    bg="#9E9E9E",
+    fg="white",
+    command=clear_all
+)
+clear_button.pack(pady=10)  
 
 root.mainloop()
