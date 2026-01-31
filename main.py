@@ -5,19 +5,31 @@ root.title("To-Do List")
 root.geometry("350x450")
 root.resizable(False, False)
 
+FILE_NAME = "tasks.txt"
+
 def add_task():
     task = entry.get()
     if task != "":
         listbox.insert(tk.END, task)
         entry.delete(0, tk.END)
+        save_tasks()
 
 def delete_task():
     selected = listbox.curselection()
     if selected:
         listbox.delete(selected[0])
+        save_tasks()
 
 def clear_all():
     listbox.delete(0, tk.END)
+    save_tasks()
+
+def save_tasks():
+    with open(FILE_NAME, "w") as file:
+        tasks = listbox.get(0, tk.END)
+        for task in tasks:
+            file.write(task + "\n")
+
 
 title = tk.Label(
     root,
