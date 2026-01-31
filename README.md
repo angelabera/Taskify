@@ -10,14 +10,6 @@ A simple and intuitive **to-do list application** built with Python's Tkinter li
 - 🔄 **Clear All** - Clear the entire task list at once
 - 💾 **Persistent Storage** - Tasks are automatically saved to `tasks.txt`
 
-## Screenshots
-
-The application features a clean, user-friendly interface with:
-- Input field for entering new tasks
-- Scrollable task list display
-- Three action buttons (Add Task, Delete Task, Clear All)
-- Color-coded buttons for intuitive navigation
-
 ## Requirements
 
 - Python 3.x
